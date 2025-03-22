@@ -1,6 +1,6 @@
 package com.exp1_s2_katlheen_rodriguez.exp1_s2_katlheen_rodriguez;
 
-public class pelicula {
+public class Pelicula {
     private int id;
     private String titulo;
     private int anio;
@@ -9,7 +9,7 @@ public class pelicula {
     private String sinopsis;
 
     //Constructor
-    public pelicula(int id, String titulo, int anio, String director, String genero, String sinopsis) {
+    public Pelicula(int id, String titulo, int anio, String director, String genero, String sinopsis) {
         this.id = id;
         this.titulo = titulo;
         this.anio = anio;

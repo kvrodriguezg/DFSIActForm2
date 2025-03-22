@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 public class PeliculaController {
@@ -22,4 +23,15 @@ public class PeliculaController {
     public List<Pelicula> getPeliculas() {
         return peliculas;
     }
+
+    @GetMapping("/peliculas/{id}")
+    public Pelicula getPeliculaById(@PathVariable int id) {
+        for (Pelicula pelicula : peliculas){
+            if (pelicula.getId() == id){
+                return pelicula;
+            }
+        }
+        return null;
+    }
+    
 }
